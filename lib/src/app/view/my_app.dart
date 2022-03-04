@@ -6,18 +6,16 @@ import 'package:inheritedstatemvc_app/src/controller.dart';
 
 import 'package:inheritedstatemvc_app/src/view.dart';
 
-/// To be passed to the runApp() function.
 /// This is the app's first StatefulWidget.
 class MyApp extends AppStatefulWidgetMVC {
-  ///
+  /// It is passed to the runApp() function.
   const MyApp({Key? key}) : super(key: key);
 
-  /// This is the App's State object
   @override
   AppStateMVC createState() => _MyAppState();
 }
 
-///
+/// This is the App's State object. The first or root State object.
 class _MyAppState extends AppStateMVC<MyApp> {
   factory _MyAppState() => _this ??= _MyAppState._();
   _MyAppState._() : super(controller: AppController());

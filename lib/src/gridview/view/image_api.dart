@@ -1,5 +1,8 @@
+// Copyright 2022 Andrious Solutions Ltd. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
 ///
-///
+///  Manages the API request for specifically 'image' public API's
 ///
 
 import 'package:inheritedstatemvc_app/src/controller.dart';

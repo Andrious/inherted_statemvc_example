@@ -1,5 +1,8 @@
+// Copyright 2022 Andrious Solutions Ltd. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
 ///
-///
+///  The 'Image' State Object Controller.
 ///
 
 import 'dart:async';
@@ -10,11 +13,12 @@ import 'package:http/http.dart' as http;
 
 import 'package:inheritedstatemvc_app/src/view.dart';
 
-///
+/// This is the 'image API' State Object Controller.
 class ImageAPIController extends ControllerMVC {
-  ///
+  /// Not a factory constructor and so multiple instances of this class is possible.
   ImageAPIController() : super();
 
+  /// The List of data returned by the API.
   List<String> _data = [];
 
   /// The resulting image from the API.
@@ -29,6 +33,7 @@ class ImageAPIController extends ControllerMVC {
   /// The number of images currently loading
   static int loadingCount = 0;
 
+  /// Contains all the asynchronous operations that must complete before proceeding.
   @override
   Future<bool> initAsync() async {
     // Call the API
@@ -45,7 +50,9 @@ class ImageAPIController extends ControllerMVC {
         if (!completer.isCompleted) {
           completer.complete();
           loadingCount--;
-          if (loadingCount == 0) {}
+          if (loadingCount == 0) {
+            /// All the image(s) have completed loading.
+          }
         }
       });
       imageStream.addListener(listener);
