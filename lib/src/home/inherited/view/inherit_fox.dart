@@ -25,7 +25,7 @@ class _InheritFoxState extends InheritedStateMVC<InheritFox, _FoxInherited> {
   _InheritFoxState()
       : super(
           controller: FoxController(),
-          inheritedWidget: (child) => _FoxInherited(child: child),
+          inheritedBuilder: (child) => _FoxInherited(child: child),
         );
   @override
   Widget buildChild(context) => widget.child!;

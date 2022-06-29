@@ -25,7 +25,7 @@ class _InheritDogState extends InheritedStateMVC<InheritDog, _DogInherited> {
   _InheritDogState()
       : super(
           controller: DogController(),
-          inheritedWidget: (child) => _DogInherited(child: child),
+          inheritedBuilder: (child) => _DogInherited(child: child),
         );
   @override
   Widget buildChild(context) => widget.child!;

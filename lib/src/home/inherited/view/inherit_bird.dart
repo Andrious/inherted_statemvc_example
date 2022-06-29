@@ -28,7 +28,7 @@ class _InheritBirdState extends InheritedStateMVC<InheritBird, _BirdInherited> {
   _InheritBirdState()
       : super(
           controller: BirdController(),
-          inheritedWidget: (child) => _BirdInherited(child: child),
+          inheritedBuilder: (child) => _BirdInherited(child: child),
         );
   @override
   Widget buildChild(context) => widget.child!;

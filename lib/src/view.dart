@@ -13,4 +13,5 @@ export 'package:inheritedstatemvc_app/src/gridview/view.dart';
 
 export 'package:inheritedstatemvc_app/src/home/view.dart';
 
-export 'package:mvc_pattern/mvc_pattern.dart';
+export 'package:mvc_pattern/mvc_pattern.dart'
+    hide InheritedStatefulWidget, InheritedStateMixin;

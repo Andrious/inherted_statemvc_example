@@ -5,4 +5,6 @@
 ///
 ///
 
+export 'package:inheritedstatemvc_app/src/utils/controller/inherited_state_mixin.dart';
+
 export 'package:inheritedstatemvc_app/src/utils/controller/timer_controller.dart';

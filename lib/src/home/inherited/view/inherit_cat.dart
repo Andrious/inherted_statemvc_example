@@ -25,7 +25,7 @@ class _InheritCatState extends InheritedStateMVC<InheritCat, _CatInherited> {
   _InheritCatState()
       : super(
           controller: CatController(),
-          inheritedWidget: (child) => _CatInherited(child: child),
+          inheritedBuilder: (child) => _CatInherited(child: child),
         );
   @override
   Widget buildChild(context) => widget.child!;
